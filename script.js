@@ -5,6 +5,7 @@ const navLinks = document.querySelectorAll(".nav-link");
 const backToTopBtn = document.querySelector(".back-to-top");
 const revealItems = document.querySelectorAll(".reveal");
 const parallaxItems = document.querySelectorAll("[data-parallax-speed]");
+const heroSlides = document.querySelectorAll(".hero-slide");
 const filterButtons = document.querySelectorAll(".filter-btn");
 const galleryItems = document.querySelectorAll(".gallery-item");
 const testimonialItems = document.querySelectorAll(".testimonial-item");
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initMobileMenu();
     initRevealAnimations();
     initScrollParallax();
+    initHeroStack();
     initSmoothScroll();
     initActiveNav();
     initBackToTop();
@@ -268,6 +270,19 @@ function initScrollParallax() {
     updateParallax();
     window.addEventListener("scroll", updateParallax, { passive: true });
     window.addEventListener("resize", updateParallax);
+}
+
+function initHeroStack() {
+    if (heroSlides.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let activeIndex = 0;
+    const swapSlide = () => {
+        heroSlides[activeIndex].classList.remove("active");
+        activeIndex = (activeIndex + 1) % heroSlides.length;
+        heroSlides[activeIndex].classList.add("active");
+    };
+
+    window.setInterval(swapSlide, 4200);
 }
 
 function handleFormFeedback(form, errors, successMessage) {
