@@ -1,646 +1,374 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison Lumiere | Premium Güzellik Stüdyosu</title>
-    <meta name="description" content="Maison Lumiere ile cilt, saç, makyaj ve bakım deneyimini premium bir atmosferde yeniden keşfedin.">
-    <meta name="keywords" content="güzellik salonu, cilt bakımı, saç tasarımı, makyaj, güzellik stüdyosu, istanbul">
+    <title>Taksim Beauty Center | Beyoğlu Güzellik Salonu</title>
+    <meta name="description" content="Taksim Beauty Center: saç, tırnak, cilt, microblading, kalıcı makyaj ve daha fazlası. Beyoğlu'nda profesyonel güzellik hizmetleri.">
+    <meta name="keywords" content="taksim beauty center, güzellik salonu, beyoğlu kuaför, saç tasarımı, manikür pedikür, microblading, kalıcı makyaj">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="site-shell">
-        <header class="header">
-            <div class="container header-content">
-                <a href="#anasayfa" class="brand" aria-label="Maison Lumiere anasayfa">
-                    <span class="brand-mark">
-                        <span class="brand-mark-ring"></span>
-                        <span class="brand-mark-text">ML</span>
-                    </span>
-                    <span class="brand-copy">
-                        <strong>Maison Lumiere</strong>
-                        <em>Beauty Atelier</em>
-                    </span>
-                </a>
+    <header class="site-header" id="siteHeader">
+        <div class="container header-shell">
+            <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Menüyü aç" data-i18n-aria-label="aria_open_menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-                <nav class="nav-menu" aria-label="Ana navigasyon">
-                    <ul>
-                        <li><a href="#anasayfa" class="nav-link active">Anasayfa</a></li>
-                        <li><a href="#hizmetler" class="nav-link">Hizmetler</a></li>
-                        <li><a href="#hakkimizda" class="nav-link">Stüdyo</a></li>
-                        <li><a href="#galeri" class="nav-link">Atmosfer</a></li>
-                        <li><a href="#yorumlar" class="nav-link">Yorumlar</a></li>
-                        <li><a href="#iletisim" class="nav-link">İletişim</a></li>
-                    </ul>
-                </nav>
+            <nav class="main-nav" aria-label="Ana menü">
+                <a href="#anasayfa" class="nav-link active" data-i18n="nav_home">Anasayfa</a>
+                <a href="#hizmetler" class="nav-link" data-i18n="nav_services">Hizmetler</a>
+                <a href="#galeri" class="nav-link" data-i18n="nav_gallery">Galeri</a>
+                <a href="#yorumlar" class="nav-link" data-i18n="nav_reviews">Yorumlar</a>
+                <a href="#iletisim" class="nav-link" data-i18n="nav_contact">İletişim</a>
+            </nav>
 
-                <div class="header-actions">
-                    <a href="#randevu" class="btn btn-primary">Randevu Oluştur</a>
-                    <button class="mobile-menu-toggle" type="button" aria-label="Menüyü aç">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+            <a href="#anasayfa" class="logo-link" aria-label="Taksim Beauty Center">
+                <img src="assets/images/logo.png" alt="Taksim Beauty Center logosu">
+            </a>
+
+            <div class="header-tools">
+                <div class="lang-switch" role="group" aria-label="Dil seçimi">
+                    <button class="lang-btn active" type="button" data-lang="tr">TR</button>
+                    <button class="lang-btn" type="button" data-lang="en">EN</button>
+                    <button class="lang-btn" type="button" data-lang="ar">AR</button>
+                </div>
+                <a class="header-cta" href="#rezervasyon" data-i18n="cta_header">Randevu</a>
+            </div>
+        </div>
+
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobil menü">
+            <a href="#anasayfa" class="mobile-nav-link" data-i18n="nav_home">Anasayfa</a>
+            <a href="#hizmetler" class="mobile-nav-link" data-i18n="nav_services">Hizmetler</a>
+            <a href="#galeri" class="mobile-nav-link" data-i18n="nav_gallery">Galeri</a>
+            <a href="#yorumlar" class="mobile-nav-link" data-i18n="nav_reviews">Yorumlar</a>
+            <a href="#iletisim" class="mobile-nav-link" data-i18n="nav_contact">İletişim</a>
+            <a href="#rezervasyon" class="mobile-nav-link highlight" data-i18n="cta_header">Randevu</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="anasayfa" class="hero section">
+            <div class="hero-bg">
+                <img src="assets/images/tbc-interior-main.png" alt="Taksim Beauty Center salon içi">
+            </div>
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <p class="eyebrow" data-i18n="hero_eyebrow">Beyoğlu / İstanbul</p>
+                    <h1 data-i18n="hero_title">Taksim'de saç, güzellik ve bakımın premium adresi.</h1>
+                    <p data-i18n="hero_subtitle">
+                        Taksim Beauty Center'da saç, tırnak, cilt ve estetik uygulamaları tek bir profesyonel menüde sunuyoruz.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#rezervasyon" data-i18n="hero_btn_book">Randevu Al</a>
+                        <a class="btn btn-ghost" href="#hizmetler" data-i18n="hero_btn_services">Hizmet Menüsü</a>
+                    </div>
+
+                    <div class="hero-metrics">
+                        <article class="metric-card">
+                            <strong>4.6</strong>
+                            <span data-i18n="metric_reviews">52 Google değerlendirmesi</span>
+                        </article>
+                        <article class="metric-card">
+                            <strong data-i18n="metric_open_value">Açık</strong>
+                            <span data-i18n="metric_open_label">Her gün 12:00 AM'e kadar</span>
+                        </article>
+                        <article class="metric-card">
+                            <strong>+90 507 847 77 22</strong>
+                            <span data-i18n="metric_phone_label">Hızlı rezervasyon hattı</span>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal">
+                    <figure class="hero-card main">
+                        <img src="assets/images/tbc-hair-hero-portrait.png" alt="Taksim Beauty Center saç modeli">
+                        <figcaption data-i18n="hero_card_1">Salon içinden gerçek sonuç: modern ışıltılı saç renklendirme.</figcaption>
+                    </figure>
+                    <figure class="hero-card side">
+                        <img src="assets/images/tbc-hair-long-style.png" alt="Uzun saç modeli">
+                        <figcaption data-i18n="hero_card_2">Özel gün ve günlük kullanım için uzun saç tasarımları.</figcaption>
+                    </figure>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <main>
-            <section id="anasayfa" class="hero">
-                <div class="hero-backdrop"></div>
-                <div class="container hero-grid">
-                    <div class="hero-copy reveal reveal-delay-1">
-                        <h1 class="hero-title">Sıradan bir salon değil, size özel bir ritüel.</h1>
-                        <p class="hero-text">
-                            Cilt, saç ve bakım hizmetlerini planlı bir premium akışla sunuyoruz.
-                        </p>
+        <section class="studio section">
+            <div class="container studio-grid">
+                <figure class="studio-wall reveal">
+                    <img src="assets/images/tbc-logo-wall-wide.png" alt="Taksim Beauty Center duvar logosu">
+                </figure>
 
-                        <div class="hero-actions">
-                            <a href="#randevu" class="btn btn-primary">Hemen Rezervasyon</a>
-                            <a href="#hizmetler" class="btn btn-secondary">Paketleri İncele</a>
-                        </div>
+                <div class="studio-copy reveal">
+                    <p class="eyebrow" data-i18n="about_eyebrow">Marka Kimliği</p>
+                    <h2 data-i18n="about_title">Taksim Beauty Center, kontrollü kalite ve güçlü görsel standart.</h2>
+                    <p data-i18n="about_text">
+                        Adresimiz: Kocatepe, Şht. Muhtar Bey Cd. No:2/B Kat:1 D:1, 34421 Beyoğlu/İstanbul. Kadromuz saç tasarımı,
+                        cilt bakımı, tırnak uygulamaları ve ileri estetik hizmetlerinde uzmanlaşmıştır.
+                    </p>
 
-                        <div class="hero-meta">
-                            <div class="meta-card">
-                                <strong>4.9/5</strong>
-                                <span>320+ yorum</span>
-                            </div>
-                            <div class="meta-card">
-                                <strong>15 Yıl</strong>
-                                <span>uzman deneyim</span>
-                            </div>
-                            <div class="meta-card">
-                                <strong>7 Gün</strong>
-                                <span>esnek saat</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="hero-visual reveal reveal-delay-2">
-                        <div class="hero-frame hero-frame-main hero-stack parallax-soft" data-parallax-speed="0.14">
-                            <figure class="hero-slide active">
-                                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=80" alt="Premium güzellik stüdyosu iç mekanı">
-                            </figure>
-                            <figure class="hero-slide">
-                                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80" alt="Bakım uygulama alanı">
-                            </figure>
-                            <figure class="hero-slide">
-                                <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=80" alt="Salon iç atmosferi">
-                            </figure>
-                            <div class="floating-panel glass-card">
-                                <span>Signature Skin Ritual</span>
-                                <strong>75 dk / kişiselleştirilmiş protokol</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container hero-bottom-strip reveal reveal-delay-2">
-                    <div class="strip-item reveal reveal-delay-1">
-                        <span class="strip-label">Servis Alanları</span>
-                        <strong>Cilt, saç ve event beauty</strong>
-                        <p>Bakımdan özel güne kadar seçilmiş premium menü.</p>
-                    </div>
-                    <div class="strip-item reveal reveal-delay-2">
-                        <span class="strip-label">Deneyim Akışı</span>
-                        <strong>Sakin, net ve concierge odaklı</strong>
-                        <p>Karşılama ve uygulama tek bir akışta ilerler.</p>
-                    </div>
-                    <div class="strip-item reveal reveal-delay-3">
-                        <span class="strip-label">Mekan Hissi</span>
-                        <strong>Yumuşak ışık, rafine doku</strong>
-                        <p>Daha sade, daha güvenli, daha premium bir atmosfer.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="hizmetler" class="services section">
-                <div class="container">
-                    <div class="section-heading reveal">
-                        <h2 class="section-title">Seçili hizmet menüsü</h2>
-                        <p class="section-text">Hızlı karar vermek için sadeleştirilmiş premium servis kartları.</p>
-                    </div>
-
-                    <div class="services-grid">
-                        <article class="service-card reveal">
-                            <div class="service-top">
-                                <span class="service-index">01</span>
-                                <i class="fas fa-spa"></i>
-                            </div>
-                            <h3>Cilt Ritüelleri</h3>
-                            <p>Kişiye özel arındırma ve yenileme bakımı.</p>
-                            <ul class="pill-row">
-                                <li>Hydra glow</li>
-                                <li>Barrier repair</li>
-                                <li>Lifting touch</li>
-                            </ul>
-                            <a href="#randevu" class="service-link">Seansı planla <i class="fas fa-arrow-right"></i></a>
-                        </article>
-
-                        <article class="service-card reveal">
-                            <div class="service-top">
-                                <span class="service-index">02</span>
-                                <i class="fas fa-scissors"></i>
-                            </div>
-                            <h3>Saç Tasarımı</h3>
-                            <p>Yüz hattına uygun kesim, renk ve bitiş.</p>
-                            <ul class="pill-row">
-                                <li>Cut + styling</li>
-                                <li>Gloss treatment</li>
-                                <li>Scalp care</li>
-                            </ul>
-                            <a href="#randevu" class="service-link">Detayları gör <i class="fas fa-arrow-right"></i></a>
-                        </article>
-
-                        <article class="service-card reveal featured-service">
-                            <div class="badge">En çok tercih edilen</div>
-                            <div class="service-top">
-                                <span class="service-index">03</span>
-                                <i class="fas fa-wand-magic-sparkles"></i>
-                            </div>
-                            <h3>Bridal & Event Look</h3>
-                            <p>Özel günlerde kamera dostu saç ve makyaj.</p>
-                            <ul class="pill-row">
-                                <li>Trial session</li>
-                                <li>Long-wear finish</li>
-                                <li>Veil-ready styling</li>
-                            </ul>
-                            <a href="#randevu" class="service-link">Look rezervasyonu <i class="fas fa-arrow-right"></i></a>
-                        </article>
-
-                        <article class="service-card reveal">
-                            <div class="service-top">
-                                <span class="service-index">04</span>
-                                <i class="fas fa-sun"></i>
-                            </div>
-                            <h3>Lazer & Pürüzsüzlük</h3>
-                            <p>Konfor odaklı modern epilasyon planı.</p>
-                            <ul class="pill-row">
-                                <li>Area mapping</li>
-                                <li>Skin-safe plan</li>
-                                <li>Routine follow-up</li>
-                            </ul>
-                            <a href="#randevu" class="service-link">Plan oluştur <i class="fas fa-arrow-right"></i></a>
-                        </article>
-
-                        <article class="service-card reveal">
-                            <div class="service-top">
-                                <span class="service-index">05</span>
-                                <i class="fas fa-hand-sparkles"></i>
-                            </div>
-                            <h3>Nail & Hand Care</h3>
-                            <p>Temiz bitişli manikur ve ayak bakımı.</p>
-                            <ul class="pill-row">
-                                <li>Russian manicure</li>
-                                <li>Gel finish</li>
-                                <li>Foot recovery</li>
-                            </ul>
-                            <a href="#randevu" class="service-link">Bakımı seç <i class="fas fa-arrow-right"></i></a>
-                        </article>
-
-                        <article class="service-card reveal">
-                            <div class="service-top">
-                                <span class="service-index">06</span>
-                                <i class="fas fa-heart-pulse"></i>
-                            </div>
-                            <h3>Body Contour</h3>
-                            <p>Toparlayıcı ve programlı vücut bakım seansları.</p>
-                            <ul class="pill-row">
-                                <li>Firming care</li>
-                                <li>Cellulite support</li>
-                                <li>Studio tracking</li>
-                            </ul>
-                            <a href="#randevu" class="service-link">Programı incele <i class="fas fa-arrow-right"></i></a>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section id="hakkimizda" class="about section">
-                <div class="container about-grid">
-                    <div class="about-stack reveal">
-                        <div class="image-card">
-                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80" alt="Bakım uygulama alanı">
-                        </div>
-                        <div class="glass-card stats-panel">
+                    <div class="studio-bullets">
+                        <article>
+                            <i class="fa-solid fa-location-dot"></i>
                             <div>
-                                <strong>5.000+</strong>
-                                <span>Tamamlanan randevu</span>
+                                <strong data-i18n="about_point_1_title">Merkezi Konum</strong>
+                                <p data-i18n="about_point_1_text">Taksim ve Beyoğlu bölgesine yürüyüş mesafesinde.</p>
                             </div>
+                        </article>
+                        <article>
+                            <i class="fa-solid fa-award"></i>
                             <div>
-                                <strong>92%</strong>
-                                <span>Tekrar rezervasyon oranı</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="about-copy reveal">
-                        <h2 class="section-title left">Sade ve premium salon deneyimi</h2>
-                        <p class="section-text left">
-                            Daha az kalabalık, daha güçlü görsel düzen ve net randevu akışı.
-                        </p>
-
-                        <div class="feature-list">
-                            <div class="feature-item">
-                                <i class="fas fa-circle-check"></i>
-                                <div>
-                                    <h3>Kusursuz karşılama akışı</h3>
-                                    <p>İlk bakışta hizmetler, fiyat segmentleri ve randevu çağrısı netleşiyor.</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-circle-check"></i>
-                                <div>
-                                    <h3>Yüksek görsel tutarlılık</h3>
-                                    <p>Renk, radius, gölge ve tipografi dili her bölümde aynı kalite hissini sürdürüyor.</p>
-                                </div>
-                            </div>
-                            <div class="feature-item">
-                                <i class="fas fa-circle-check"></i>
-                                <div>
-                                    <h3>Telefon odaklı okunabilirlik</h3>
-                                    <p>Kart sıraları ve CTA düzeni mobil öncelikli dengelendi.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="about-numbers">
-                            <div class="number-card">
-                                <strong>15+</strong>
-                                <span>uzman yıl</span>
-                            </div>
-                            <div class="number-card">
-                                <strong>12</strong>
-                                <span>kişilik ekip</span>
-                            </div>
-                            <div class="number-card">
-                                <strong>4</strong>
-                                <span>özel bakım odası</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="galeri" class="gallery section">
-                <div class="container">
-                    <div class="section-heading reveal">
-                        <h2 class="section-title">Stüdyo atmosferi</h2>
-                    </div>
-
-                    <div class="gallery-filters reveal">
-                        <button class="filter-btn active" data-filter="all" type="button">Tümü</button>
-                        <button class="filter-btn" data-filter="studio" type="button">Stüdyo</button>
-                        <button class="filter-btn" data-filter="skin" type="button">Cilt</button>
-                        <button class="filter-btn" data-filter="hair" type="button">Saç</button>
-                        <button class="filter-btn" data-filter="event" type="button">Event</button>
-                    </div>
-
-                    <div class="gallery-grid">
-                        <article class="gallery-item reveal reveal-delay-1 parallax-soft" data-category="studio" data-parallax-speed="0.1">
-                            <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=80" alt="Stüdyo iç tasarım">
-                            <div class="gallery-overlay">
-                                <span>Studio Mood</span>
-                                <strong>Dokulu yüzeyler, yumuşak ışık, rafine karşılama</strong>
+                                <strong data-i18n="about_point_2_title">4.6/5 Müşteri Puanı</strong>
+                                <p data-i18n="about_point_2_text">Google üzerinde 52 değerlendirme ile güven inşa eden servis kalitesi.</p>
                             </div>
                         </article>
-                        <article class="gallery-item reveal reveal-delay-2 parallax-soft" data-category="skin" data-parallax-speed="0.12">
-                            <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=900&q=80" alt="Cilt bakım uygulaması">
-                            <div class="gallery-overlay">
-                                <span>Skin Room</span>
-                                <strong>Arındırıcı ve sakin bakım akışı</strong>
-                            </div>
-                        </article>
-                        <article class="gallery-item reveal reveal-delay-3 parallax-soft" data-category="hair" data-parallax-speed="0.14">
-                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" alt="Saç tasarım alanı">
-                            <div class="gallery-overlay">
-                                <span>Hair Design</span>
-                                <strong>Doğal hacim ve temiz bitiş</strong>
-                            </div>
-                        </article>
-                        <article class="gallery-item reveal reveal-delay-1 parallax-soft" data-category="event" data-parallax-speed="0.11">
-                            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=80" alt="Özel gün hazırlığı">
-                            <div class="gallery-overlay">
-                                <span>Event Prep</span>
-                                <strong>Özel günlerde kamera dostu görünüm planı</strong>
-                            </div>
-                        </article>
-                        <article class="gallery-item reveal reveal-delay-2 parallax-soft" data-category="studio" data-parallax-speed="0.09">
-                            <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?auto=format&fit=crop&w=900&q=80" alt="Bekleme alanı">
-                            <div class="gallery-overlay">
-                                <span>Lounge</span>
-                                <strong>Sakin bekleme ve premium karşılama</strong>
-                            </div>
-                        </article>
-                        <article class="gallery-item reveal reveal-delay-3 parallax-soft" data-category="skin" data-parallax-speed="0.13">
-                            <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=900&q=80" alt="Bakım ekipmanları">
-                            <div class="gallery-overlay">
-                                <span>Technique</span>
-                                <strong>Modern ekipman ve temiz protokol</strong>
-                            </div>
-                        </article>
-                        <article class="gallery-item reveal reveal-delay-1 parallax-soft" data-category="hair" data-parallax-speed="0.12">
-                            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=900&q=80" alt="Saç bakım detayı">
-                            <div class="gallery-overlay">
-                                <span>Detail</span>
-                                <strong>Doğal parlaklık ve kontrollü bitiş</strong>
-                            </div>
-                        </article>
-                        <article class="gallery-item reveal reveal-delay-2 parallax-soft" data-category="event" data-parallax-speed="0.1">
-                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80" alt="Özel gün hazırlığı detay">
-                            <div class="gallery-overlay">
-                                <span>Final Look</span>
-                                <strong>Özel gün için yumuşak ama güçlü görünüm</strong>
+                        <article>
+                            <i class="fa-solid fa-star"></i>
+                            <div>
+                                <strong data-i18n="about_point_3_title">Gerçek Portfolyo</strong>
+                                <p data-i18n="about_point_3_text">Sitede kullanılan ana görseller salonun kendi uygulama sonuçlarıdır.</p>
                             </div>
                         </article>
                     </div>
-                </div>
-            </section>
-
-            <section class="experience section">
-                <div class="container experience-grid">
-                    <div class="experience-copy reveal">
-                        <h2 class="section-title left">Mobilde daha net, daha hızlı, daha premium</h2>
-                        <p class="section-text left">
-                            Daha kısa metinler, güçlü görseller ve sade etkileşimlerle karar süreci hızlandı.
-                        </p>
-                    </div>
-
-                    <div class="experience-panels reveal">
-                        <div class="experience-card">
-                            <span>01</span>
-                            <h3>İlk izlenim</h3>
-                            <p>Başlık, görsel ve değer önerisi ilk ekranı daha pahalı ve daha güven verici yapıyor.</p>
-                        </div>
-                        <div class="experience-card">
-                            <span>02</span>
-                            <h3>Okuma akışı</h3>
-                            <p>Spacing ve grid yapısı masaüstünde editoryal, mobilde yorucu olmayan bir ritim kuruyor.</p>
-                        </div>
-                        <div class="experience-card">
-                            <span>03</span>
-                            <h3>Dönüşüm noktası</h3>
-                            <p>Randevu ve iletişim alanları içerik sonuna bırakılmadan tüm sayfa boyunca besleniyor.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="yorumlar" class="testimonials section">
-                <div class="container">
-                    <div class="section-heading reveal">
-                        <h2 class="section-title">Gerçek müşteri yorumları</h2>
-                    </div>
-
-                    <div class="testimonials-shell reveal">
-                        <div class="testimonials-slider">
-                            <article class="testimonial-item active">
-                                <p>“İlk kez bir salon sitesine bakıp içerideki deneyimin gerçekten iyi olacağını hissettim. Randevu akışı çok net, ekip çok profesyonel.”</p>
-                                <div class="testimonial-author">
-                                    <strong>Elif Yılmaz</strong>
-                                    <span>Signature Skin Ritual</span>
-                                </div>
-                            </article>
-                            <article class="testimonial-item">
-                                <p>“Saç tasarımında sonucu konuşmadan önce ne istediğimi bu kadar iyi anlayan çok az yer gördüm. Site de aynı özen hissini veriyor.”</p>
-                                <div class="testimonial-author">
-                                    <strong>Derya Acar</strong>
-                                    <span>Cut + Gloss Session</span>
-                                </div>
-                            </article>
-                            <article class="testimonial-item">
-                                <p>“Bridal prova ve gün akışı kusursuzdu. Sayfadaki görsel kalite ve sadelik gerçek deneyimle birebir örtüşüyor.”</p>
-                                <div class="testimonial-author">
-                                    <strong>Zehra Kaya</strong>
-                                    <span>Bridal Look</span>
-                                </div>
-                            </article>
-                        </div>
-
-                        <div class="testimonial-controls">
-                            <button class="control-btn prev-btn" type="button" aria-label="Önceki yorum">
-                                <i class="fas fa-arrow-left"></i>
-                            </button>
-                            <button class="control-btn next-btn" type="button" aria-label="Sonraki yorum">
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="pricing section">
-                <div class="container">
-                    <div class="section-heading reveal">
-                        <h2 class="section-title">Net paket seçenekleri</h2>
-                    </div>
-
-                    <div class="pricing-grid">
-                        <article class="pricing-card reveal">
-                            <span class="pricing-tier">Essential</span>
-                            <h3>Parlak Başlangıç</h3>
-                            <div class="price">1.490 TL</div>
-                            <ul>
-                                <li>45 dk cilt arındırma</li>
-                                <li>Kişisel ürün önerisi</li>
-                                <li>Stüdyo sonrası mini plan</li>
-                            </ul>
-                            <a href="#randevu" class="btn btn-secondary">Paketi Seç</a>
-                        </article>
-
-                        <article class="pricing-card featured-pricing reveal">
-                            <span class="pricing-tier">Signature</span>
-                            <h3>Glow Couture</h3>
-                            <div class="price">2.950 TL</div>
-                            <ul>
-                                <li>75 dk kişiselleştirilmiş bakım</li>
-                                <li>Boyun + dekolte desteği</li>
-                                <li>Uzman takip önerisi</li>
-                                <li>Premium bakım protokolü</li>
-                            </ul>
-                            <a href="#randevu" class="btn btn-primary">En Çok Tercih Edilen</a>
-                        </article>
-
-                        <article class="pricing-card reveal">
-                            <span class="pricing-tier">Private</span>
-                            <h3>Event Atelier</h3>
-                            <div class="price">4.500 TL</div>
-                            <ul>
-                                <li>Saç + makyaj prova</li>
-                                <li>Gün içi görünüm planı</li>
-                                <li>Fotoğraf dostu bitiş</li>
-                                <li>Özel hazırlık akışı</li>
-                            </ul>
-                            <a href="#randevu" class="btn btn-secondary">Rezervasyon Yap</a>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section id="iletisim" class="contact section">
-                <div class="container contact-grid">
-                    <div class="contact-copy reveal">
-                        <h2 class="section-title left">Tek dokunuşta iletişim</h2>
-                        <div class="contact-card-list">
-                            <div class="contact-card">
-                                <i class="fas fa-location-dot"></i>
-                                <div>
-                                    <strong>Nişantaşı / İstanbul</strong>
-                                    <span>Valikonagi Cad. No: 118</span>
-                                </div>
-                            </div>
-                            <div class="contact-card">
-                                <i class="fas fa-phone-volume"></i>
-                                <div>
-                                    <strong>+90 (212) 555 12 34</strong>
-                                    <span>09:00 - 20:00 arasında ulaşılabilir</span>
-                                </div>
-                            </div>
-                            <div class="contact-card">
-                                <i class="fas fa-envelope-open-text"></i>
-                                <div>
-                                    <strong>hello@maisonlumiere.co</strong>
-                                    <span>Kurumsal ve özel rezervasyon talepleri</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="contact-form-panel reveal">
-                        <form id="contactForm" class="contact-form">
-                            <div class="form-group">
-                                <label for="name">Ad Soyad</label>
-                                <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">E-posta</label>
-                                    <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Telefon</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="+90 5xx xxx xx xx">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="service">İlgilendiğiniz hizmet</label>
-                                <select id="service" name="service" required>
-                                    <option value="">Hizmet seçin</option>
-                                    <option value="skin">Cilt Ritüelleri</option>
-                                    <option value="hair">Saç Tasarımı</option>
-                                    <option value="bridal">Bridal & Event Look</option>
-                                    <option value="laser">Lazer & Pürüzsüzlük</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Mesajınız</label>
-                                <textarea id="message" name="message" rows="5" placeholder="Nasıl bir deneyim planlamak istiyorsunuz?" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">Mesaj Gönder</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
-            <section id="randevu" class="appointment section">
-                <div class="container appointment-grid">
-                    <div class="appointment-copy reveal">
-                        <h2 class="section-title left">Hızlı randevu alanı</h2>
-                        <p class="section-text left">
-                            1 dakikada talep bırakın, ekip size geri dönüş yapsın.
-                        </p>
-                    </div>
-
-                    <div class="appointment-panel reveal">
-                        <form id="appointmentForm" class="appointment-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="app-name">Ad Soyad</label>
-                                    <input type="text" id="app-name" name="app-name" placeholder="Adınız Soyadınız" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="app-phone">Telefon</label>
-                                    <input type="tel" id="app-phone" name="app-phone" placeholder="+90 5xx xxx xx xx" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="app-date">Tarih</label>
-                                    <input type="date" id="app-date" name="app-date" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="app-time">Saat</label>
-                                    <select id="app-time" name="app-time" required>
-                                        <option value="">Saat seçin</option>
-                                        <option value="10:00">10:00</option>
-                                        <option value="11:30">11:30</option>
-                                        <option value="13:00">13:00</option>
-                                        <option value="15:00">15:00</option>
-                                        <option value="17:00">17:00</option>
-                                        <option value="18:30">18:30</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="app-service">Paket</label>
-                                <select id="app-service" name="app-service" required>
-                                    <option value="">Paket seçin</option>
-                                    <option value="glow">Glow Couture</option>
-                                    <option value="essential">Parlak Başlangıç</option>
-                                    <option value="event">Event Atelier</option>
-                                    <option value="custom">Kişisel Danışmanlık</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="app-notes">Not</label>
-                                <textarea id="app-notes" name="app-notes" rows="4" placeholder="Varsa cilt, saç ya da etkinlik notlarınızı paylaşın"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">Randevu Talebi Oluştur</button>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="container footer-content">
-                <div>
-                    <a href="#anasayfa" class="brand footer-brand">
-                        <span class="brand-mark">
-                            <span class="brand-mark-ring"></span>
-                            <span class="brand-mark-text">ML</span>
-                        </span>
-                        <span class="brand-copy">
-                            <strong>Maison Lumiere</strong>
-                            <em>Beauty Atelier</em>
-                        </span>
-                    </a>
-                    <p class="footer-copy">Sade lüks, yüksek güven ve güçlü dönüşüm hissi veren premium güzellik deneyimi.</p>
-                </div>
-
-                <div class="footer-links">
-                    <a href="#hizmetler">Hizmetler</a>
-                    <a href="#galeri">Atmosfer</a>
-                    <a href="#yorumlar">Yorumlar</a>
-                    <a href="#iletisim">İletişim</a>
-                </div>
-
-                <div class="footer-socials">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
-        </footer>
+        </section>
 
-        <button class="back-to-top" type="button" aria-label="Yukarı çık">
-            <i class="fas fa-arrow-up"></i>
-        </button>
+        <section id="hizmetler" class="services section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow" data-i18n="services_eyebrow">Hizmet Menüsü</p>
+                    <h2 data-i18n="services_title">Kategori bazlı, filtrelenebilir ve fiyatı net hizmet sistemi.</h2>
+                    <p data-i18n="services_subtitle">
+                        Menüde kategoriye dokunarak servisleri, tahmini süreyi ve başlangıç fiyatını görebilirsiniz.
+                    </p>
+                </div>
+
+                <div class="services-toolbar reveal">
+                    <label class="search-wrap" for="serviceSearch">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input id="serviceSearch" type="search" placeholder="Hizmet ara" data-i18n-placeholder="services_search_placeholder">
+                    </label>
+                    <p class="services-helper" data-i18n="services_hint">Örn: Ombre, Manikür, Microblading, Derma Pen</p>
+                </div>
+
+                <figure class="services-board reveal">
+                    <img src="assets/images/tbc-services-board.png" alt="Taksim Beauty Center hizmet panosu">
+                    <figcaption data-i18n="services_board_caption">Salon içindeki hizmet panosu dijital menüye dönüştürüldü.</figcaption>
+                </figure>
+
+                <div class="services-menu reveal" id="serviceCategories"></div>
+            </div>
+        </section>
+
+        <section id="galeri" class="gallery section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow" data-i18n="gallery_eyebrow">Gerçek Çalışmalar</p>
+                    <h2 data-i18n="gallery_title">İlk bakışta kaliteyi gösteren salon ve uygulama galerisi.</h2>
+                </div>
+
+                <div class="gallery-grid">
+                    <article class="gallery-item reveal">
+                        <img src="assets/images/tbc-hair-back-blonde-long.png" alt="Blonde saç uygulaması">
+                        <div class="gallery-overlay">
+                            <strong data-i18n="gallery_item_1_title">Saç Renklendirme</strong>
+                            <span data-i18n="gallery_item_1_text">Yumuşak geçişli blond tonlama</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item reveal">
+                        <img src="assets/images/tbc-hair-side-highlights.png" alt="Saç kesimi ve röfle">
+                        <div class="gallery-overlay">
+                            <strong data-i18n="gallery_item_2_title">Kesim + Röfle</strong>
+                            <span data-i18n="gallery_item_2_text">Doğal çizgide katlı form ve ışık oyunları</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item reveal">
+                        <img src="assets/images/tbc-hair-red-wave.png" alt="Bakır saç dalga uygulaması">
+                        <div class="gallery-overlay">
+                            <strong data-i18n="gallery_item_3_title">Bakır Seri</strong>
+                            <span data-i18n="gallery_item_3_text">Yüksek parlaklıkta sıcak ton dönüşümü</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item reveal">
+                        <img src="assets/images/tbc-nails-heart-pink.png" alt="Kalp desenli tırnak tasarımı">
+                        <div class="gallery-overlay">
+                            <strong data-i18n="gallery_item_4_title">Nail Art</strong>
+                            <span data-i18n="gallery_item_4_text">Detay odaklı sezon tasarımları</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item reveal">
+                        <img src="assets/images/tbc-nails-leopard.png" alt="Leopar desenli tırnak">
+                        <div class="gallery-overlay">
+                            <strong data-i18n="gallery_item_5_title">Jel + Tasarım</strong>
+                            <span data-i18n="gallery_item_5_text">Uzun ömürlü yüzey ve güçlü desen</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item reveal">
+                        <img src="assets/images/tbc-products-shelf.png" alt="Profesyonel ürün rafı">
+                        <div class="gallery-overlay">
+                            <strong data-i18n="gallery_item_6_title">Profesyonel Ürünler</strong>
+                            <span data-i18n="gallery_item_6_text">Uygulama sonrası bakım için kaliteli seri</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item reveal">
+                        <img src="assets/images/tbc-tattoo-floral.png" alt="Çiçek tattoo uygulaması">
+                        <div class="gallery-overlay">
+                            <strong data-i18n="gallery_item_7_title">Tattoo & Piercing</strong>
+                            <span data-i18n="gallery_item_7_text">Minimal çizgilerle steril işlem protokolü</span>
+                        </div>
+                    </article>
+                    <article class="gallery-item reveal">
+                        <img src="assets/images/tbc-interior-main.png" alt="Salon iç mekan">
+                        <div class="gallery-overlay">
+                            <strong data-i18n="gallery_item_8_title">Salon Atmosferi</strong>
+                            <span data-i18n="gallery_item_8_text">Mermer doku, altın ışık ve premium yerleşim</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="yorumlar" class="reviews section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow" data-i18n="reviews_eyebrow">Müşteri Yorumları</p>
+                    <h2 data-i18n="reviews_title">Yorumlar dil seçimine göre anında güncellenir.</h2>
+                </div>
+
+                <div class="reviews-shell reveal">
+                    <div class="review-slider" id="reviewSlider"></div>
+                    <div class="review-controls">
+                        <button class="review-btn" id="prevReview" type="button" aria-label="Önceki yorum" data-i18n-aria-label="aria_prev_review">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                        <button class="review-btn" id="nextReview" type="button" aria-label="Sonraki yorum" data-i18n-aria-label="aria_next_review">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="iletisim" class="contact section">
+            <div class="container contact-grid">
+                <article class="contact-panel reveal">
+                    <p class="eyebrow" data-i18n="contact_eyebrow">İletişim</p>
+                    <h2 data-i18n="contact_title">Taksim Beauty Center'a tek tıkla ulaşın.</h2>
+
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong data-i18n="contact_address_label">Adres</strong>
+                                <p data-i18n="contact_address_value">Kocatepe, Şht. Muhtar Bey Cd. No:2/B Kat:1 D:1, 34421 Beyoğlu/İstanbul</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <div>
+                                <strong data-i18n="contact_phone_label">Telefon</strong>
+                                <p>0507 847 77 22</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <strong data-i18n="contact_hours_label">Çalışma Saatleri</strong>
+                                <p data-i18n="contact_hours_value">Açık · 12:00 AM'e kadar</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-actions">
+                        <a href="tel:+905078477722" class="btn btn-primary">
+                            <i class="fa-solid fa-phone"></i>
+                            <span data-i18n="cta_call">Ara</span>
+                        </a>
+                        <a href="https://wa.me/905078477722" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span data-i18n="cta_whatsapp">WhatsApp</span>
+                        </a>
+                        <a href="https://maps.google.com/?q=Kocatepe%20%C5%9Eht.%20Muhtar%20Bey%20Cd.%20No:2/B%20Kat:1%20D:1%20Beyo%C4%9Flu%20%C4%B0stanbul" class="btn btn-ghost" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span data-i18n="cta_directions">Yol Tarifi</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article id="rezervasyon" class="reservation-panel reveal">
+                    <p class="eyebrow" data-i18n="form_eyebrow">Hızlı Talep</p>
+                    <h2 data-i18n="form_title">Kısa formu doldurun, ekip sizi arasın.</h2>
+
+                    <form id="quickForm" class="quick-form">
+                        <div class="field-group">
+                            <label for="clientName" data-i18n="form_name_label">Ad Soyad</label>
+                            <input id="clientName" name="clientName" type="text" required data-i18n-placeholder="form_name_placeholder" placeholder="Adınız Soyadınız">
+                        </div>
+                        <div class="field-group">
+                            <label for="clientPhone" data-i18n="form_phone_label">Telefon</label>
+                            <input id="clientPhone" name="clientPhone" type="tel" required data-i18n-placeholder="form_phone_placeholder" placeholder="05xx xxx xx xx">
+                        </div>
+                        <div class="field-group">
+                            <label for="reservationService" data-i18n="form_service_label">Hizmet</label>
+                            <select id="reservationService" name="reservationService" required>
+                                <option value="" data-i18n="form_service_placeholder">Hizmet seçin</option>
+                                <option value="hair" data-i18n="service_option_hair">Saç</option>
+                                <option value="nail" data-i18n="service_option_nail">Tırnak</option>
+                                <option value="skin" data-i18n="service_option_skin">Cilt</option>
+                                <option value="aesthetic" data-i18n="service_option_aesthetic">Kalıcı Makyaj / Microblading</option>
+                            </select>
+                        </div>
+                        <div class="field-group">
+                            <label for="clientNote" data-i18n="form_note_label">Not</label>
+                            <textarea id="clientNote" name="clientNote" rows="4" data-i18n-placeholder="form_note_placeholder" placeholder="İstediğiniz işlem veya saat aralığını yazın"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" data-i18n="form_submit">Talep Gönder</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <img src="assets/images/logo.png" alt="Taksim Beauty Center logosu" class="footer-logo">
+            <p data-i18n="footer_text">Taksim Beauty Center • Beyoğlu / İstanbul • 0507 847 77 22</p>
+        </div>
+    </footer>
+
+    <div class="mobile-action-bar">
+        <a href="tel:+905078477722" class="action-btn call">
+            <i class="fa-solid fa-phone"></i>
+            <span data-i18n="cta_call">Ara</span>
+        </a>
+        <a href="https://wa.me/905078477722" target="_blank" rel="noopener" class="action-btn whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span data-i18n="cta_whatsapp">WhatsApp</span>
+        </a>
     </div>
+
+    <div class="desktop-float-actions">
+        <a href="tel:+905078477722" class="float-btn call" aria-label="Telefon">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="https://wa.me/905078477722" target="_blank" rel="noopener" class="float-btn whatsapp" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Yukarı dön" data-i18n-aria-label="aria_back_to_top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
